@@ -45,7 +45,7 @@ button {
     width: 100px;
     margin-top: 5px;
     height: 40px;
-    background: url(./assets/logo.png)no-repeat center center/contain;
+    background: url(../../../assets/images/logo.png) no-repeat center center/contain;
 }
 
 #right-top {
@@ -215,6 +215,12 @@ button {
     color: blue;
     padding: 5px 10px;
 }
+
+
+
+
+
+
 
 @media screen and (max-width: 600px) {
     #bottom-bar {

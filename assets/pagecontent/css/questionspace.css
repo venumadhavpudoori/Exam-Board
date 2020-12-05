@@ -76,6 +76,8 @@ input[type="radio"], button {
 
 
 /*  NAVBAR MEDIAQUERIES ---------------------------------- */
+
+
 @media (max-width: 575px) {
     
 .questionTimer{
