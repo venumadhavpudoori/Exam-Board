@@ -1,0 +1,230 @@
+/* form --------------------------------------------------- */
+
+fieldset {
+	border: 0;
+	margin: 2rem 0;
+}
+
+fieldset legend {
+    font-size: 18px;
+	font-weight: 500;
+}
+
+.answer__item {
+    background-color: #f6f6f6;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 0.75rem 1.25rem;
+	 margin: 0.25rem 0;
+}
+
+/* Hide Radio Buttons and Submit Button */
+input[type="radio"], button {
+  display: none;
+}
+
+/* Any correct answer on any answered question, highlight in light green */
+:valid .answer__item--is-correct {
+    background-color: rgba(61, 181, 64, 0.6)
+}
+
+
+/* Any chosen answer, highlight in red */
+:checked + .answer__item { 
+    color: #ffffff; 
+    background-color: #c70000 
+}
+
+/* Any correctly chosen answer, highlight in bright green */
+:checked + .answer__item--is-correct { 
+    background-color: #3db540; 
+}
+
+/* prevent chosing another answer once chosen */
+:valid { 
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none 
+}
+:valid + .answer__item { 
+    pointer-events: none 
+}
+
+[class*="empty"] {
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+/* question attempt buttons */
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  border-radius:5px;
+  cursor: pointer;
+}
+
+
+/*  NAVBAR MEDIAQUERIES ---------------------------------- */
+@media (max-width: 575px) {
+    
+.questionTimer{
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    align-items: center;
+}
+    /* Track */
+::-webkit-scrollbar-track {
+  background:transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:transparent; 
+}
+.count_breadcrumbs>ul{
+  width: 100%;  
+  overflow: auto;
+  white-space: nowrap;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.count_breadcrumbs>ul>li{
+  display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    list-style: none;
+    z-index: 1;
+    transition: all 0.5s;
+    margin: 0 0.5rem;
+    text-align: center;
+    background-color: aliceblue;
+}
+.count_breadcrumbs>ul>li>a{
+  display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align:bottom;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+} 
+  .card{
+     display: none;
+    }  
+}
+
+@media (min-width: 768px) {
+    
+.questionTimer{
+    width: 100%;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    align-items: center;
+}
+    /* Track */
+::-webkit-scrollbar-track {
+  background:transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:transparent; 
+}
+.count_breadcrumbs>ul{
+  width: 100%;  
+  overflow: auto;
+  white-space: nowrap;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.count_breadcrumbs>ul>li{
+  display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    list-style: none;
+    z-index: 1;
+    transition: all 0.5s;
+    margin: 0 0.5rem;
+    text-align: center;
+    background-color: aliceblue;
+}
+.count_breadcrumbs>ul>li>a{
+  display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align:bottom;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+} 
+  .card{
+     display: none;
+    }  
+}
+
+@media (min-width: 992px) {
+
+  .questionTimer{
+    display: none;
+} 
+    .count_breadcrumbs{
+        display: none;
+    }
+    .card{
+        display:  contents;
+    }
+}
